@@ -1,9 +1,9 @@
 # ergoFACE 2023
 forked from https://github.com/weinzmi/daumUSB2BLE 
 
-Identical to the original code but
-* modified daumUSB.js to be compatible with newer "serialport" version as I was not able to make v3.1.2 used in the original project working
-* added a setp-by-step guide from empty micro sd-card to ZWIFT working for people lile me not very skilled with the raspberry pi world
+Identical to the original code but,
+* modified daumUSB.js to be compatible with newer "serialport" version as I was not able to make v3.1.2 used in the original project working, and
+* added a step-by-step guide from an empty micro sd-card to ZWIFT working for people like me not very skilled with the raspberry pi world.
 
 Many thanks @weinzmi for the idea and the working code
 
