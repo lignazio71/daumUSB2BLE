@@ -17,13 +17,21 @@ Many thanks @weinzmi for the idea and the working code
    * 1x cheap rs 232 cable,
    * two break out plugs (one male ,one female),
    * resistor 4.7kOhm (to be used in the female break out plug),
-   * see the connections https://bikeboard.at/forum/topic/1564-schnittstellenkabel-rs-232-an-pc/#comment-2424750
+   * see the connections [scheme](https://bikeboard.at/forum/topic/1564-schnittstellenkabel-rs-232-an-pc/#comment-2424750)
 4. USB to RS232 (male) converter
 5. USB-A to micro-USB converter to connect to the rasperry pi zero w
 
-To set up the raspberry pi you do not need the bike. So I would first start with the Raspberry (1) and only when it is working properly move to points 2..5
+To set up the raspberry pi you do not need the bike. So I would first start with the Raspberry (1) and only when it is working properly move to points 2 to 5 and buy the bike.
 
 Some models of the DAUM 8008 are supposed to work with a normal RS 232 cable, I would give first a try before modifying it.
+
+## Setting up the Raspberry Pi
+Use the [imager](https://www.raspberrypi.com/software/) to prepare the micro SD card. I have selected:
+* Operaing System: RASPBERRY PI OS LITE )32-bit)
+* In the settings define:
+  * a name for the host e.g. "rasp2ble", 
+  * the user name. This MUST be "pi".  Set a password you like to connect,
+  * set up the WLAN to connect later on with SSH. (SSID and password)
 
 # ergoFACE
 * forked from https://github.com/360manu/kettlerUSB2BLE
