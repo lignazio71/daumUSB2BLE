@@ -7,8 +7,23 @@ Identical to the original code but,
 
 Many thanks @weinzmi for the idea and the working code
 
-# Step by Step setup ..
-To follow ....
+# Step by Step Setup Guide
+
+## HARDWARE needed:
+1. A raspberry PI zero W  (likely other models are also working) + micro usb supply + micro sd card
+
+2. An ergometer DAUM 8008. Depending on how much rust is on it, it cost between 100 and 300€
+3. A RS-232 modified cable. You need,
+   * one cheap rs 232 cable,
+   * two break out plugs (one male ,one female),
+   * resistor 4.7kOhm (in the female side),
+   * see the connections https://bikeboard.at/forum/topic/1564-schnittstellenkabel-rs-232-an-pc/#comment-2424750
+4. USB to RS232 (male) converter
+5. USB A to micro USB converter to connect to the rasperry pi zero w
+
+To set up the raspberry pi you do not need the bike. So I would first start with the Raspberry (1) and only when it is working properly move to points 2..5
+
+Some models of the DAUM 8008 are supposed to work with a normal RS 232 cable, I would give firt a try before modyfying it.
 
 # ergoFACE
 * forked from https://github.com/360manu/kettlerUSB2BLE
