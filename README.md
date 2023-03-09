@@ -3,23 +3,23 @@ forked from https://github.com/weinzmi/daumUSB2BLE
 
 Identical to the original code but,
 * modified daumUSB.js to be compatible with newer "serialport" version as I was not able to make v3.1.2 used in the original project working, and
-* added a step-by-step guide from an empty micro sd-card to ZWIFT working for people like me not very skilled with the raspberry pi world.
+* added a step-by-step guide from "empty micro sd-card" to "ZWIFT working" for people like me not very skilled with the raspberry pi world.
 
 Many thanks @weinzmi for the idea and the working code
 
 # Step by Step Setup Guide
 
 ## HARDWARE needed:
-1. A raspberry PI zero W  (likely other models are also working) + micro usb supply + micro sd card
+1. Raspberry PI zero W  (likely other models are also working) + micro usb supply + micro sd card
 
-2. An ergometer DAUM 8008. Depending on how much rust is on it, it cost between 100 and 300€
-3. A RS-232 modified cable. You need,
-   * one cheap rs 232 cable,
+2. Ergometer DAUM 8008. Depending on how much rust is on it, it cost between 100 and 300€
+3. RS-232 modified cable. You need,
+   * 1x cheap rs 232 cable,
    * two break out plugs (one male ,one female),
-   * resistor 4.7kOhm (in the female side),
+   * resistor 4.7kOhm (to be used in the female break out plug),
    * see the connections https://bikeboard.at/forum/topic/1564-schnittstellenkabel-rs-232-an-pc/#comment-2424750
 4. USB to RS232 (male) converter
-5. USB A to micro USB converter to connect to the rasperry pi zero w
+5. USB-A to micro-USB converter to connect to the rasperry pi zero w
 
 To set up the raspberry pi you do not need the bike. So I would first start with the Raspberry (1) and only when it is working properly move to points 2..5
 
