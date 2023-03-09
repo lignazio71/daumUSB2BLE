@@ -3,6 +3,8 @@ var com = require('serialport')
 var DaumSIM = require('./daumSIM')
 const config = require('config-yml') // Use config for yaml config files in Node.js projects
 var DEBUG = config.DEBUG.daumUSB // turn this on for debug information in console
+const ByteLength = require('@serialport/parser-byte-length')
+//const parser = require('@serialport/parser-byte-length')
 // /////////////////////////////////////////////////////////////////////////
 // instantiation
 // /////////////////////////////////////////////////////////////////////////
@@ -150,27 +152,36 @@ function daumUSB () {
   // open port as specified by daum
   // /////////////////////////////////////////////////////////////////////////
   this.open = function () {
-    com.list(function (err, ports) {
-      if (err) {
-        self.emitter.emit('error', '[daumUSB.js] - open: ' + err)
-        throw err
-      }
+//    com.list(function (err, ports) {
+    com.list().then(ports => {
+      //if (err) {
+      //  self.emitter.emit('error', '[daumUSB.js] - open: ' + err)
+      //  throw err
+      //}
       ports.forEach(function (p) {
         if (p.vendorId && p.productId) { // ??? don't know if this is the ID of ergobike, or the serial adapter, this has to be configured for every bike, so I might skip it
           if (DEBUG) console.log('[daumUSB.js] - open:' + p.vendorId + '  ' + p.productId) // RS232 converter Ids
-          if (DEBUG) console.log('[daumUSB.js] - open - Ergobike found on port ' + p.comName)
-          self.emitter.emit('key', '[daumUSB.js] - Ergobike found on port ' + p.comName)
-          var port = new com.SerialPort(p.comName, {
-            baudrate: config.port.baudrate,
+          if (DEBUG) console.log('[daumUSB.js] - open - Ergobike found on port ' + p.path)
+          self.emitter.emit('key', '[daumUSB.js] - Ergobike found on port ' + p.path)
+          //var port = new com.SerialPort(p.comName, {
+           var port = new com (p.path, {
+            baudrate: config.port.baudRate,
             dataBits: config.port.dataBits,
             parity: config.port.parity,
             stopBits: config.port.stopBits,
             flowControl: config.port.flowControl,
-            parser: com.parsers.byteLength(config.port.parserLength) // custom parser set to byte length that is more than the actual response message of ergobike, but no other way possible right know
+            //parser: 40 
+            //parser: com.pipe(new ByteLength({length: config.port.parserLength}) ) 
+            //parser: com.parsers.byteLength(config.port.parserLength) // custom parser set to byte length that is more than the actual response message of ergobike, but no other way possible right know
           }, false) // thats why the index loops in 'readAndDispatch' are used to get the prefix of each command
+          //var parser = port.pipe(new ByteLength({length: config.port.parserLength}))
+          var parser = port.pipe(new ByteLength({length: config.port.parserLength}))
+          //var parser = port.pipe(new ByteLength({length: 19}))
+          //parser.on('data', console.log)  
           port.open(function () {
             self.port = port
             port.on('data', self.readAndDispatch)
+            parser.on('data',self.readAndDispatch)
             self.writer = setInterval(self.flushNext, config.intervals.flushNext) // this is writing the data to the port; i've put here the timeout of DAUM interface spec; 50ms
             if (gotAdressSuccess === false) { // check, otherwise after a restart via webserver, this will run again
               if (DEBUG) console.log('[daumUSB.js] - looking for cockpit adress')
