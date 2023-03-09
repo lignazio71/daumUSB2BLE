@@ -1,3 +1,15 @@
+# ergoFACE 2023
+forked from https://github.com/weinzmi/daumUSB2BLE 
+
+Identical to the original code but
+* modified daumUSB.js to be compatible with newer "serialport" version as I was not able to make v3.1.2 used in the original project working
+* added a setp-by-step guide from empty micro sd-card to ZWIFT working for people lile me not very skilled with the raspberry pi world
+
+Many thanks @weinzmi for the idea and the working code
+
+# Step by Step setup ..
+To follow ....
+
 # ergoFACE
 * forked from https://github.com/360manu/kettlerUSB2BLE
 * adjusted to work with Daum ergobike 8008TRS
