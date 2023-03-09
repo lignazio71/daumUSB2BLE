@@ -23,7 +23,7 @@ Many thanks @weinzmi for the idea and the working code
 
 To set up the raspberry pi you do not need the bike. So I would first start with the Raspberry (1) and only when it is working properly move to points 2..5
 
-Some models of the DAUM 8008 are supposed to work with a normal RS 232 cable, I would give firt a try before modyfying it.
+Some models of the DAUM 8008 are supposed to work with a normal RS 232 cable, I would give first a try before modifying it.
 
 # ergoFACE
 * forked from https://github.com/360manu/kettlerUSB2BLE
