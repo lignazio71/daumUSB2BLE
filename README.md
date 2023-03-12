@@ -99,9 +99,12 @@ git clone https://github.com/lignazio71/daumUSB2BLE.git
 ```
 Install all dependencies and the program
 ```shell
+cd daumUSB2BLE/
+```
+```shell
 source installPackages.sh 
 ```
-It will take roughly 30 minutes to complete.
+It will take roughly 30 minutes to complete. It will install all the packages with the exact version that was working for me.
 
 To try if it is working
 ```shell
