@@ -111,7 +111,7 @@ To try if it is working
 sudo node server.js 
 ```
 
-** Working/Not Working
+### Working/Not Working
 I have tried and it was recognized by these apps
 * Zwift
 * MyWhoosh
