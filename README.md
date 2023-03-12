@@ -51,7 +51,7 @@ Enable the serial port
 sudo raspi-config
 ```  
 Go to point 3, then to serial interface.  Answer the first question witn NO and the second with YES.
-Right arrow until "Finish", wehn you press enter the system will reboot.
+Right arrow until "Finish", when you press enter the system will reboot.
 
 Connect again ssh to the raspberry.
 
@@ -84,8 +84,41 @@ sudo mv node-v10.24.1-linux-armv6l /usr/local/node
 cd /usr/bin
 ```
 ```shell
+sudo ln -s /usr/local/node/bin/node node
+```
 ```shell
+sudo ln -s /usr/local/node/bin/npm npm
+```
 ```shell
+cd /home/pi
+```
+
+Downolad the program from GitHub (you might need to install git ...)
+```shell
+git clone https://github.com/lignazio71/daumUSB2BLE.git
+```
+Install all dependencies and the program
+```shell
+source installPackages.sh 
+```
+It will take roughly 30 minutes to complete.
+
+To try if it is working
+```shell
+sudo node server.js 
+```
+
+** Working/Not Working
+I have tried and it was recognized by these apps
+* Zwift
+* MyWhoosh
+* Whaoo RGT
+* Trainer Day (but not controlling the power, just displaying Power/RPM/Speed)
+
+I have tried wo success 
+* to detect it with my Garmin Watch but it did not work
+* Break Away for iOS
+
 
 
 # ergoFACE
