@@ -26,12 +26,67 @@ To set up the raspberry pi you do not need the bike. So I would first start with
 Some models of the DAUM 8008 are supposed to work with a normal RS 232 cable, I would give first a try before modifying it.
 
 ## Setting up the Raspberry Pi
+### Before starting
+My Raspberry pi zero W was a bit unstable. I repeated the procedure below on a fresh SD card to check it. No errors but the bluetooth on the card was not working anymore. 
+I inserted back the working SD card and the bluetooth was also not working. The next day I restarded from scratch the installation, and everything was ok.
+
+Even if you arrive to the end of the installation procedure without errors it might not work and you need to repeat it ....
+
+### Install Instructions
 Use the [imager](https://www.raspberrypi.com/software/) to prepare the micro SD card. I have selected:
-* Operaing System: RASPBERRY PI OS LITE )32-bit)
+* Operaing System: RASPBERRY PI OS (32-bit)
+  * the UI is not really needed, but I used it to check if the PI was able to connect to a bluetooth mouse.
 * In the settings define:
-  * a name for the host e.g. "rasp2ble", 
+  * a name for the host e.g. "ergoface", 
   * the user name. This MUST be "pi".  Set a password you like to connect,
   * set up the WLAN to connect later on with SSH. (SSID and password)
+
+Once the PI is up and running connect ssh to it. On a mac open Terminal and type:
+```shell
+ssh pi@ergoface.local
+```
+
+Enable the serial port
+```shell
+sudo raspi-config
+```  
+Go to point 3, then to serial interface.  Answer the first question witn NO and the second with YES.
+Right arrow until "Finish", wehn you press enter the system will reboot.
+
+Connect again ssh to the raspberry.
+
+Set up the bluetooth according to bleno instructions:
+```shell
+sudo systemctl stop bluetooth
+```
+```shell
+sudo systemctl disable bluetooth
+```
+```shell
+sudo apt-get install bluetooth bluez libbluetooth-dev libudev-dev libusb-1.0-0-dev
+```
+```shell
+sudo reboot
+```
+Connect again ssh to the raspberry.
+
+Set up node.js. I have used version 10.24.1
+```shell
+wget https://nodejs.org/dist/v10.24.1/node-v10.24.1-linux-armv6l.tar.gz
+```
+```shell
+tar -xf node-v10.24.1-linux-armv6l.tar.gz
+```
+```shell
+sudo mv node-v10.24.1-linux-armv6l /usr/local/node
+```
+```shell
+cd /usr/bin
+```
+```shell
+```shell
+```shell
+
 
 # ergoFACE
 * forked from https://github.com/360manu/kettlerUSB2BLE
