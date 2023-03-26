@@ -63,6 +63,8 @@ class FitnessControlPoint extends Bleno.Characteristic {
   // Follow Control Point instruction from the client
   onWriteRequest (data, offset, withoutResponse, callback) {
     var state = data.readUInt8(0)
+    callback(this.RESULT_SUCCESS);  // added as in orignal kattlerUSB2BLE
+
     switch (state) {
       case ControlPointOpCode.requestControl:
         if (DEBUG) console.log('[fitness-control-point-characteristic.js] - ControlPointOpCode.requestControl.')
