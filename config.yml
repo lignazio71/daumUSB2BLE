@@ -40,32 +40,32 @@ timeouts:
 
 simulation:
     maxGrade: 16
-    mRider: 78
+    mRider: 60
     mBike: 9
     g: 9.8067
     p: 1.225
     e: 0.97
 
 gears:
-    ratioLow: 1.36
+    ratioLow: 1.00
     ratioHigh: 0.16765
     circumference: 211.5
     speedConversion: 0.0006
 
 gearbox:
-    g1: 1.36
-    g2: 1.48
-    g3: 1.62
-    g4: 1.79
-    g5: 2.00
-    g6: 2.17
-    g7: 2.38
-    g8: 2.63
-    g9: 2.94
-    g10: 3.33
-    g11: 3.57
-    g12: 3.85
-    g13: 4.17
+    g1: 1.00
+    g2: 1.13
+    g3: 1.26
+    g4: 1.36
+    g5: 1.48
+    g6: 1.62
+    g7: 1.79
+    g8: 2.00
+    g9: 2.30
+    g10: 2.63
+    g11: 3.00
+    g12: 3.33
+    g13: 3.85
     g14: 4.55
 
 gpio:
