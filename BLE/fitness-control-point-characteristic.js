@@ -1,6 +1,8 @@
 
 var Bleno = require('bleno');
-var DEBUG = true;
+const config = require('config-yml') // Use config for yaml config files in Node.js projects
+var DEBUG = config.DEBUG.BLE
+//var DEBUG = true;
 
 // Spec
 // Control point op code
