@@ -1,11 +1,11 @@
 [Unit]
-Description=ergoFACE service
+Description=ergofaceservice
 Requires=bluetooth.service network-online.target
 After=bluetooth.service network-online.target
 
 
 [Service]
-ExecStart=/usr/bin/node /home/pi/daumUSB2BLE/server.js
+ExecStart=sudo /usr/bin/node server.js
 # Required on some systems
 #WorkingDirectory=/home/pi/daumUSB2BLE
 Restart=always
@@ -15,6 +15,9 @@ RestartSec=10
 StandardOutput=syslog
 StandardError=syslog
 SyslogIdentifier=nodejs-example
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/daumUSB2BLE
 #User=<alternate user>
 #Group=<alternate group>
 Environment=NODE_ENV=production PORT=3000
