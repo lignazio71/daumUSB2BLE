@@ -6,7 +6,7 @@ Identical to the original code but,
 * modified daumUSB.js to be compatible with newer "serialport" version as I was not able to make v3.1.2 used in the original project working, and
 * added a step-by-step guide from "empty micro sd-card" to "ZWIFT working" for people like me not very skilled with the raspberry pi world.
 
-Many thanks [weinzmi](https://github.com/weinzmi/daumUSB2BLE) and [360mnu](https://github.com/360manu/kettlerUSB2BLE) for the idea and the working code
+Many thanks [weinzmi](https://github.com/weinzmi/daumUSB2BLE) and [360manu](https://github.com/360manu/kettlerUSB2BLE) for the idea and the working code
 
 # Step by Step Setup Guide
 
@@ -112,6 +112,23 @@ To try if it is working
 sudo node server.js 
 ```
 
+###Automatic start at power up
+Execute these commands as described in [360manu](https://github.com/360manu/kettlerUSB2BLE) 
+```shell
+sudo systemctl link /home/pi/daumUSB2BLE/lib/systemd/system/ergoFACE.service 
+```
+```shell
+sudo systemctl enable ergoFACE.service
+```
+```shell
+ sudo systemctl start ergoFACE.service
+```
+Restart the Raspberry PI, the service should start automatically and in case of failure it should restart
+```shell
+sudo reboot
+```
+
+
 ### Working/Not Working
 I have tried and it was recognized by these apps
 * Zwift
@@ -121,11 +138,11 @@ I have tried and it was recognized by these apps
 
 I have tried wo success 
 * to detect it with my Garmin Watch but it did not work
-* Break Away for iOS
+
+## Enjoy it !
 
 
-
-# ergoFACE
+# ergoFACE  
 * forked from https://github.com/360manu/kettlerUSB2BLE
 * adjusted to work with Daum ergobike 8008TRS
 
