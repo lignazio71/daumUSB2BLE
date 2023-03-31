@@ -6,7 +6,7 @@ Identical to the original code but,
 * modified daumUSB.js to be compatible with newer "serialport" version as I was not able to make v3.1.2 used in the original project working, and
 * added a step-by-step guide from "empty micro sd-card" to "ZWIFT working" for people like me not very skilled with the raspberry pi world.
 
-Many thanks [weinzmi][https://github.com/weinzmi/daumUSB2BLE] and [360mnu][https://github.com/360manu/kettlerUSB2BLE] for the idea and the working code
+Many thanks [weinzmi](https://github.com/weinzmi/daumUSB2BLE) and [360mnu](https://github.com/360manu/kettlerUSB2BLE) for the idea and the working code
 
 # Step by Step Setup Guide
 
