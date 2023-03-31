@@ -2,10 +2,11 @@
 forked from https://github.com/weinzmi/daumUSB2BLE 
 
 Identical to the original code but,
+* modified fitness-control-point-characteristic.js as ZWIFT was not controlling anymore,
 * modified daumUSB.js to be compatible with newer "serialport" version as I was not able to make v3.1.2 used in the original project working, and
 * added a step-by-step guide from "empty micro sd-card" to "ZWIFT working" for people like me not very skilled with the raspberry pi world.
 
-Many thanks @github/weinzmi for the idea and the working code
+Many thanks [weinzmi][https://github.com/weinzmi/daumUSB2BLE] and [360mnu][https://github.com/360manu/kettlerUSB2BLE] for the idea and the working code
 
 # Step by Step Setup Guide
 
@@ -116,7 +117,7 @@ I have tried and it was recognized by these apps
 * Zwift
 * MyWhoosh
 * Whaoo RGT
-* Trainer Day (but not controlling the power, just displaying Power/RPM/Speed)
+* Trainer Day
 
 I have tried wo success 
 * to detect it with my Garmin Watch but it did not work
