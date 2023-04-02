@@ -111,6 +111,27 @@ To try if it is working
 ```shell
 sudo node server.js 
 ```
+After one minute you should see in the shell
+```shell
+pi@ergoface:~/daumUSB2BLE $ sudo node server.js 
+[daumBLE.js] - DAUM Ergobike 8008 TRS - BLE server starting
+[daumBLE.js] - DAUM Ergobike 8008 TRS - new state: poweredOn
+[daumBLE.js] - DAUM Ergobike 8008 TRS - advertisingStart: success
+[daumBLE.js] - DAUM Ergobike 8008 TRS - servicesSet: success
+[daumBLE.js] - DAUM Ergobike 8008 TRS - setServices: success
+[daumBLE.js] - DAUM Ergobike 8008 TRS - accept - Client: 42:ed:ed:e1:c3:4c
+[daumBLE.js] - DAUM Ergobike 8008 TRS - rssiUpdate: -58
+[FitnessControlPoint] onSubscribe
+```
+Now you can try to connect with zwift
+
+When I was searching for the power sensor:
+
+![Alt text](./screenshots/IMG_0001.PNG "Search Power Sensor")
+
+After all 3 sensors have been connected:
+
+![Alt text](./screenshots/IMG_0002.PNG "All 3 sensors connected")
 
 ### Automatic start at power up
 Execute these commands as described in [360manu](https://github.com/360manu/kettlerUSB2BLE) 
