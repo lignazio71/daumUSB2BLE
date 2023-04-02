@@ -94,7 +94,7 @@ sudo ln -s /usr/local/node/bin/npm npm
 cd /home/pi
 ```
 
-Downolad the program from GitHub (you might need to install git ...)
+Downolad the program from GitHub (you might need to install git ..."sudo apt-get update" + "sudo  apt install git")
 ```shell
 git clone https://github.com/lignazio71/daumUSB2BLE.git
 ```
@@ -112,7 +112,7 @@ To try if it is working
 sudo node server.js 
 ```
 
-###Automatic start at power up
+### Automatic start at power up
 Execute these commands as described in [360manu](https://github.com/360manu/kettlerUSB2BLE) 
 ```shell
 sudo systemctl link /home/pi/daumUSB2BLE/lib/systemd/system/ergoFACE.service 
