@@ -3,8 +3,9 @@ forked from https://github.com/weinzmi/daumUSB2BLE
 
 Identical to the original code but,
 * modified fitness-control-point-characteristic.js as ZWIFT was not controlling anymore,
-* modified daumUSB.js to be compatible with newer "serialport" version as I was not able to make v3.1.2 used in the original project working, and
+* modified daumUSB.js to be compatible with newer "serialport" versions as I was not able to install v3.1.2 used in the original project, and
 * added a step-by-step guide from "empty micro sd-card" to "ZWIFT working" for people like me not very skilled with the raspberry pi world.
+I have tried the whole sequence on an empty sd-card and it was working.
 
 Many thanks [weinzmi](https://github.com/weinzmi/daumUSB2BLE) and [360manu](https://github.com/360manu/kettlerUSB2BLE) for the idea and the working code
 
