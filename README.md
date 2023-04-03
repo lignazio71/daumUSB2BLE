@@ -159,6 +159,10 @@ I have tried and it was recognized by these apps
 I have tried wo success 
 * to detect it with my Garmin Watch but it did not work
 
+The ergo-bike can set the power in steps of 5W. For training in ergo mode is perfect.
+In simulation mode it feels a bit slow in reacting to the slope changes of the road. 
+Changing gear is aslo a bit slow but one can change many gear steps faster than ony a real bike.
+
 ## Enjoy it !
 --------------------------------------------------------------------
 
@@ -166,7 +170,7 @@ I have tried wo success
 Some notes I left from the original description:
 
 
-## Data fro simulation mode
+## Configuration for simulation mode
 * if SIM mode is a feature you want to use, edit the parameters in config.yml to fit yours
 ```
 simulation:
@@ -190,6 +194,7 @@ gearbox: // this are the gear ratios used for each gear
     g13: 4.17
     g14: 4.55
 ```
+These parameters influence how much power is applied to the ergo-bike according to the conditions provided by zwift (speed/slope/wind).
 
 ## GIOPs for shifting gears
 * if you want to use 2 external buttons for shifting gears, edit the parameters in config.yml to fit yours
