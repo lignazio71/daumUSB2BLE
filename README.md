@@ -150,6 +150,8 @@ sudo reboot
 ### Setting on the ergo-bike
 I set the ergo-bike in manual mode (Program 0). When zwift is not controlling the bike sets the power to 25W
 
+You can use the wheel to change gear in simulation mode.
+
 ### Working/Not Working
 I have tried and it was recognized by these apps
 * Zwift
@@ -162,13 +164,13 @@ I have tried wo success
 
 The ergo-bike can set the power in steps of 5W. For training in ergo mode is perfect.
 In simulation mode it feels a bit slow in reacting to the slope changes of the road. 
-Changing gear is aslo a bit slow but one can change many gear steps faster than ony a real bike.
+Changing gear is aslo a bit slow but on the other hand you can change many gear steps at once, much faster than on a real bike.
 
 ## Enjoy it !
 --------------------------------------------------------------------
 
 ## Settings
-Some notes I left from the original description:
+Some notes I left from the original description of [weinzmi](https://github.com/weinzmi/daumUSB2BLE):
 
 
 ## Configuration for simulation mode
