@@ -154,10 +154,11 @@ You can use the wheel to change gear in simulation mode.
 
 ### Working/Not Working
 I have tried and it was recognized by these apps
-* Zwift
-* MyWhoosh
-* Whaoo RGT
-* Trainer Day
+* Zwift - works both ERGO and simulation
+* MyWhoosh - works in ERGO, not in simulation
+* Whaoo RGT - works in ERGO, not in simulation
+* Trainer Day - works in ERGO
+The command for simulation mode must be slightly different between zwift (working) to other apps (not working) ... it would need some debug
 
 I have tried wo success 
 * to detect it with my Garmin Watch but it did not work
