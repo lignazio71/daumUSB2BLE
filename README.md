@@ -158,6 +158,7 @@ I have tried and it was recognized by these apps
 * MyWhoosh - works in ERGO, not in simulation
 * Whaoo RGT - works in ERGO, not in simulation
 * Trainer Day - works in ERGO
+
 The command for simulation mode must be slightly different between zwift (working) to other apps (not working) ... it would need some debug
 
 I have tried wo success 
