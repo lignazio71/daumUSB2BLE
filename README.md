@@ -14,7 +14,7 @@ Many thanks [weinzmi](https://github.com/weinzmi/daumUSB2BLE) and [360manu](http
 ## HARDWARE needed:
 1. Raspberry PI zero W  (likely other models are also working) + micro usb supply + micro sd card
 
-2. Ergometer DAUM 8008. Depending on how much rust is on it, it cost between 100 and 300€
+2. Ergometer DAUM 8008. Depending on how much rust is on it, it can cost between 100 and 300€
 3. USB-A to micro-USB converter to connect to the rasperry pi zero w
 4. USB to RS232 (male) converter with original FTDI chip
 5. RS-232 modified cable. NOT NEEDED IF the ergo-bike is TSR-3. For all other models it is needed
