@@ -168,6 +168,14 @@ The ergo-bike can set the power in steps of 5W. For training in ergo mode is per
 In simulation mode it feels a bit slow in reacting to the slope changes of the road. 
 Changing gear is aslo a bit slow but on the other hand you can change many gear steps at once, much faster than on a real bike.
 
+### Some picture of the Smart Ergo Bike
+
+![Alt text](./screenshots/IMG_0222D.jpeg "The bike in the cave")
+![Alt text](./screenshots/IMG_0224D.jpeg "The Raspberry pi mounted on the bike")
+![Alt text](./screenshots/IMG_0225D.jpeg "The RS 232 connected to the bike computer")
+
+
+
 ## Enjoy it !
 --------------------------------------------------------------------
 
